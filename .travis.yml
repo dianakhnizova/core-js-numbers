@@ -1,20 +1,7 @@
 language: node_js
 node_js:
-  - "stable"
-notifications:
-  email: false
-
-cache:
-  directories:
-  - node_modules
-
+  - "stable"  # или другая версия Node.js
 script:
-  npm test
+  - npm install
+  - npm test
 
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github-token: key1
-  local_dir: build
-  on:
-    branch: main
