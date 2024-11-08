@@ -1,15 +1,3 @@
-language: node_js  # Указываем, что проект использует Node.js
+language: node_js
 node_js:
-  - "v22.11.0"
-
-# Секцию script можно настроить под свои нужды
-script:
-  - npm install  # Устанавливаем зависимости проекта
-  - npm test     # Запускаем тесты (предполагается, что у вас настроены тесты в package.json)
-
-# Опционально можно настроить уведомления
-notifications:
-  email:
-    recipients:
-      - khnizovad@gmail.com  # Укажите свой email для уведомлений
-    on_failure: always  # Уведомления о неудачных сборках
+ - "node"
