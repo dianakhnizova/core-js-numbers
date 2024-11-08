@@ -1,3 +1,20 @@
 language: node_js
 node_js:
- - "node"
+  - "stable"
+notifications:
+  email: false
+
+cache:
+  directories:
+  - node_modules
+
+script:
+  npm test
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github-token: key1
+  local_dir: build
+  on:
+    branch: main
